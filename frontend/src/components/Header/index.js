@@ -1,9 +1,12 @@
 import React from 'react';
 
-const Header = () => (
-  <header>
-    <h1>App</h1>
+import Navigation from '../Navigation';
+
+import './styles.css';
+
+export default () => (
+  <header className="page-header">
+    <h1 className="logo">EdApp</h1>
+    <Navigation/>
   </header>
 );
-
-export default Header;

@@ -1,0 +1,10 @@
+.nav {
+  display: flex;
+  justify-content: space-around;
+  vertical-align: middle;
+}
+
+.nav li {
+  list-style: none;
+  margin: 30px 10px;
+}

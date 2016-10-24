@@ -4,6 +4,8 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AppStore from './stores';
 
+import './styles.css';
+
 class App extends Component {
 
   static getStores() {

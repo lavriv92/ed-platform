@@ -1,0 +1,9 @@
+.page-header {
+  background: #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header .logo {
+  padding: 10px;
+}
