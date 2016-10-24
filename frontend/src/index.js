@@ -1,14 +1,17 @@
 import React from 'react';
-import { Router, Route, hashHistory } from 'react-router';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import { render } from 'react-dom';
 
 import App from './containers/App';
+import Index from './containers/Index';
 
 import './stylesheets/common.css';
 
 const routes = (
   <Router history={hashHistory}>
-    <Route path="/" component={App} />
+    <Route path="/" component={App}>
+      <IndexRoute path="" component={Index}/>
+    </Route>
   </Router>
 );
 

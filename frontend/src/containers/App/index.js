@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <section className="wrapper">
         <Header />
-        <section className="main-section">App</section>
+        <section className="main-section">{this.props.children}</section>
         <Footer />
       </section>
     );
