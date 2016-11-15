@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <section className="wrapper">
         <Header />
-        <section className="main-section">{this.props.children}</section>
+        <main className="main-section">{this.props.children}</main>
         <Footer />
       </section>
     );

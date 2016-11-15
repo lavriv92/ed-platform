@@ -3,10 +3,24 @@ import { Link } from 'react-router';
 
 import './styles.css';
 
-export default () => (
-  <nav className="nav">
-      <li><Link to="/">index</Link></li>
-      <li><Link to="/" >index</Link></li>
-      <li><Link to="/" >index</Link></li>
-  </nav>
-);
+const routes = [{
+  name: 'Home',
+  path: '/'
+},{
+  name: 'Home',
+  path: '/'
+}];
+
+export default () => {
+  let route;
+  const routeNodes = Object.keys(routes).map(key => {
+    route = routes[key];
+    return <li><Link to={route.path}>{route.name}</Link></li>
+  });
+
+  return (
+    <nav className="nav">
+      <ul>{routeNodes}</ul>
+    </nav>
+  );
+}

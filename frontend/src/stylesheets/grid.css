@@ -1,3 +1,8 @@
+body {
+  font-family: Verdana,Geneva,Tahoma,sans-serif;
+  background: #fdfdfd;
+}
+
 .container {
   width: 940px;
   margin: 0 auto;
