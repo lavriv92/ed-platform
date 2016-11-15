@@ -1,5 +1,5 @@
 .page-header {
-  background: #00C853;
+  background: #ffbb42;
   display: flex;
   justify-content: space-between;
 }
@@ -7,7 +7,7 @@
 .page-header .logo {
   margin: 10px;
   font-size: 1.1rem;
-  color: #fff;
+  color: #ff3800;
   line-height: 40px;
   text-shadow: 0 0 0 1px #000;
 }

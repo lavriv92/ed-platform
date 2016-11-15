@@ -4,9 +4,7 @@ const PopularCoaches = ({coaches}) => {
   return (
     <aside>
       <h2>Popular coaches</h2>
-      <div>
-        coaches
-      </div>
+      <aside>popular coaches.</aside>
     </aside>
   );
 };
