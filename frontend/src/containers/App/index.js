@@ -19,8 +19,8 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = ({appReducer}) => {
-  return appReducer;
+const mapStateToProps = () => {
+  return {};
 };
 
 export default connect(mapStateToProps)(App);

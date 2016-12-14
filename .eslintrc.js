@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "node": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -12,7 +13,8 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "mocha"
     ],
     "rules": {
         "indent": [
@@ -32,6 +34,7 @@ module.exports = {
             "always"
         ],
         "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error"
+        "react/jsx-uses-vars": "error",
+        "mocha/no-exclusive-tests": "error"
     }
 };
