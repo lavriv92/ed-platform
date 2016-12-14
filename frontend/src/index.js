@@ -1,18 +1,16 @@
 import React from 'react';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { Router, hashHistory } from 'react-router';
 
-import App from './containers/App';
-import Index from './containers/Index';
+import routes from './routes';
+import appStore from './stores';
 
 import './stylesheets/common.css';
 
-const routes = (
-  <Router history={hashHistory}>
-    <Route path="/" component={App}>
-      <IndexRoute path="" component={Index}/>
-    </Route>
-  </Router>
+render(
+  <Provider store={appStore}>
+    <Router history={hashHistory} routes={routes} />
+  </Provider>,
+  document.querySelector('[data-react-component="root"]')
 );
-
-render(routes, document.querySelector('[data-react-component="root"]'));
