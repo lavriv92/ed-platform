@@ -1,3 +1,9 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 
-export default createStore(state => state);
+import appReducer from './containers/App/reducers';
+
+let reducers = combineReducers({
+  app: appReducer
+});
+
+export default createStore(reducers);
