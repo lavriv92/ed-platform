@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import LatestCources from '../../components/LatestCources';
+import LatestCourses from '../../components/LatestCourses';
 import PopularCources from '../../components/PopularCources';
 import PopularCoaches from '../../components/PopularCoaches';
 
@@ -10,7 +10,7 @@ class Index extends Component {
   render() {
     return (
       <section className="container index-page">
-        <LatestCources />
+        <LatestCourses />
         <PopularCources />
         <PopularCoaches />
       </section>

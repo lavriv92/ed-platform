@@ -11,3 +11,8 @@
   list-style: none;
   margin: 10px 10px;
 }
+
+.nav li a {
+  color: #ffffff;
+  text-decoration: none;
+}

@@ -3,7 +3,8 @@ import React from 'react';
 const LatestCourses = props => {
   return (
     <aside>
-      <h2>Last cources</h2>
+      <h2>Latest courses</h2>
+      <aside>latest courses</aside>
     </aside>
   );
 };

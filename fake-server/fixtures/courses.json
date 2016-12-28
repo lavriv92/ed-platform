@@ -1,0 +1,40 @@
+{
+  "page": 1,
+  "count": 100,
+  "items": [{
+    "id": 1,
+    "title": "Test",
+    "description": "lorem example",
+    "photo": "/uri"
+  },{
+    "id": 2,
+    "title": "Test",
+    "description": "lorem example",
+    "photo": "/uri"
+  },{
+    "id": 3,
+    "title": "Test",
+    "description": "lorem example",
+    "photo": "/uri"
+  },{
+    "id": 4,
+    "title": "Test",
+    "description": "lorem example",
+    "photo": "/uri"
+  },{
+    "id": 5,
+    "title": "Test",
+    "description": "lorem example",
+    "photo": "/uri"
+  },{
+    "id": 6,
+    "title": "Test",
+    "description": "lorem example",
+    "photo": "/uri"
+  },{
+    "id": 7,
+    "title": "Test",
+    "description": "lorem example",
+    "photo": "/uri"
+  }]
+}

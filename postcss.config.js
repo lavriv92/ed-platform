@@ -2,8 +2,6 @@ module.exports = {
   plugins: [
     require('postcss-import')(),
     require('precss')(),
-    require('autoprefixer')({
-      browsers: ['> 5%']
-    });
+    require('autoprefixer')();
   ]
 };

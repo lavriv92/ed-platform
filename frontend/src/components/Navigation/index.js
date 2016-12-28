@@ -7,7 +7,10 @@ const routes = [{
   name: 'Home',
   path: '/'
 },{
-  name: 'Home',
+  name: 'Cources',
+  path: '/'
+},{
+  name: 'Coaches',
   path: '/'
 }];
 
@@ -23,4 +26,4 @@ export default () => {
       <ul>{routeNodes}</ul>
     </nav>
   );
-}
+};
