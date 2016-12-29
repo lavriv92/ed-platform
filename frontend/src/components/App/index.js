@@ -5,7 +5,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import LoginModal from '../../components/LoginModal';
 
-import { OPEN_LOGIN_MODAL } from './reducers';
+import { OPEN_LOGIN_MODAL, CLOSE_LOGIN_MODAL } from './reducers';
 
 import './styles.css';
 
@@ -15,7 +15,7 @@ const App = ({isLoginModalOpen, dispatch, children}) => (
     <button onClick={e => dispatch({ type: OPEN_LOGIN_MODAL })}>Open modal</button>
     <main className="main-section">{children}</main>
     <Footer />
-    <LoginModal isOpen={isLoginModalOpen}/>
+    <LoginModal isOpen={isLoginModalOpen} onClose={e => dispatch({ type: CLOSE_LOGIN_MODAL })}/>
   </section>
 );
 

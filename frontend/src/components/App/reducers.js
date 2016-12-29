@@ -22,7 +22,9 @@ const loginModal = (state=initialState, action) => {
   }
 };
 
-const app = (state={}, action) => {};
+const app = (state={}, action) => {
+  return state;
+};
 
 export default combineReducers({
   app,

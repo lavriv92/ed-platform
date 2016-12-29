@@ -1,9 +1,10 @@
 import React, { PropTypes } from 'react';
 import Modal from 'react-modal';
 
-const LoginModal = ({isOpen}) => {
+const LoginModal = ({isOpen, onClose}) => {
   return (
     <Modal isOpen={isOpen}>
+      <button onClick={onClose}>close</button>
       <h2>Login modal title</h2>
       <section>Login modal content</section>
     </Modal>
