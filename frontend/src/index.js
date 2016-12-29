@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { Router, hashHistory } from 'react-router';
 
 import routes from './routes';
-import appStore from './stores';
+import appStore from './store';
 
 import './stylesheets/common.css';
 

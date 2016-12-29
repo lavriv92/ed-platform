@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha ./frontend/**/**/__test__/*.test.js",
+    "test": "./node_modules/mocha/bin/mocha ./frontend/**/**/__test__/*.test.js --compilers babel-core/register",
     "start": "webpack-dev-server --hot --inline --config ./webpack.config.dev",
     "build": "webpack --config ./webpack.config.dev",
     "fake-server": "node ./fake-server/index"
@@ -34,6 +34,7 @@
     "react": "^15.3.2",
     "react-addons-test-utils": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-modal": "^1.6.4",
     "react-redux": "^5.0.1",
     "react-router": "^2.8.1",
     "redux": "^3.6.0",

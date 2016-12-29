@@ -1,13 +1,13 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
-import appReducer from './containers/App/reducers';
+import appReducers from './components/App/reducers';
 // import rootSaga from './sagas';
 
 let sagaMiddleware = createSagaMiddleware();
 
 let reducers = combineReducers({
-  app: appReducer
+  appReducers,
 });
 
 export default createStore(
