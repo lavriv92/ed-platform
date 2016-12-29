@@ -7,8 +7,8 @@ const routes = [{
   name: 'Home',
   path: '/'
 },{
-  name: 'Cources',
-  path: '/'
+  name: 'Class Rooms',
+  path: '/classrooms'
 },{
   name: 'Coaches',
   path: '/'
