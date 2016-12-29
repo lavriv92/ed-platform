@@ -2,15 +2,36 @@ package main
 
 import (
     "fmt"
-    "html"
     "log"
+    "time"
     "net/http"
+    "encoding/json"
 )
 
-func main() {
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
-    })
+type Todo struct {
+  Name      string
+  Completed bool
+  Due       time.Time
+}
 
-    log.Fatal(http.ListenAndServe(":8080", nil))
+type Todos []Todo
+
+func main() {
+    http.HandleFunc("/", IndexHandler)
+    http.HandleFunc("/todos", TodosHandler)
+
+    log.Fatal(http.ListenAndServe(":8888", nil))
+}
+
+func IndexHandler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, "Hello page, %q", html.EscapeString(r.URL.Path))
+}
+
+func TodosHandler(w http.ResponseWriter, r *http.Request) {
+  todos := Todos{
+    Todo{Name: "Hello todo"},
+    Todo{Name: "Hello test todo"},
+  }
+
+  json.newEncoder(w).Encode(todos)
 }
