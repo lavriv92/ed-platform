@@ -3,11 +3,15 @@ import appReducers, { OPEN_LOGIN_MODAL, CLOSE_LOGIN_MODAL } from '../reducers';
 
 describe('App reducers', () => {
 
+  it('should modal has closed state on init', () => {
+    let { loginModal } = appReducers({}, {});
+    assert.equal(loginModal.isOpened, false);
+  });
+
   it('should open modal', () => {
     let { loginModal } = appReducers({}, {
       type: OPEN_LOGIN_MODAL
     });
-
     assert.equal(loginModal.isOpened, true);
   });
 
@@ -15,7 +19,6 @@ describe('App reducers', () => {
     let { loginModal } = appReducers({}, {
       type: CLOSE_LOGIN_MODAL
     });
-
     assert.equal(loginModal.isOpened, false);
   });
 

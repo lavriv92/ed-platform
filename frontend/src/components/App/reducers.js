@@ -22,14 +22,7 @@ const loginModal = (state=initialState, action) => {
   }
 };
 
-const app = (state={}, action) => {
-  switch (action.type) {
-    case OPEN_LOGIN_MODAL:
-      return Object.assign({}, state, )
-    default:
-      return state;
-  }
-};
+const app = (state={}, action) => {};
 
 export default combineReducers({
   app,
