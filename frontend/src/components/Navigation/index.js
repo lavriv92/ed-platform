@@ -11,7 +11,7 @@ const routes = [{
   path: '/classrooms'
 },{
   name: 'Coaches',
-  path: '/'
+  path: '/coaches'
 }];
 
 export default () => {
