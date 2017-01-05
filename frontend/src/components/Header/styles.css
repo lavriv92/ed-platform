@@ -1,5 +1,5 @@
 .page-header {
-  background: #ffbb42;
+  background: var(--teal);
   display: flex;
   justify-content: space-between;
 }

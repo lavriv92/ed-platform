@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import LatestCourses from '../../components/LatestCourses';
 import PopularCources from '../../components/PopularCources';
@@ -18,4 +19,8 @@ class Index extends Component {
   }
 }
 
-export default Index;
+const mapStateToProps = (state) => {
+  return {};
+};
+
+export default connect(mapStateToProps)(Index);
