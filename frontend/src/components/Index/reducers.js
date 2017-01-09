@@ -45,7 +45,10 @@ const popularCources = (state={
 export const LOAD_POPULAR_COACHES_SUCCESS = 'LOAD_POPULAR_COACHES_SUCCESS';
 export const LOAD_POPULAR_COACHES_PROGRESS = 'LOAD_POPULAR_COACHES_PROGRESS';
 
-const popularCoaches = (state={}, action) => {
+const popularCoaches = (state={
+  loading: false, 
+  items: []
+}, action) => {
   switch (action.type) {
     case LOAD_POPULAR_COACHES_SUCCESS:
       return Object.assign({}, state, {
@@ -60,8 +63,8 @@ const popularCoaches = (state={}, action) => {
   }
 };
 
-export default combineReducers(
+export default combineReducers({
   popularCoaches,
-  lastCources,
+  popularCources,
   lastCources
-);
+});

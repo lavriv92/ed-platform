@@ -1,16 +1,16 @@
-export const LOAD_CLASSROOM_SUCCESS = 'LOAD_CLASSROOM_SUCCESS';
-export const LOAD_CLASSROOM_PROGRESS = 'LOAD_CLASSROOM_PROGRESS';
+export const LOAD_COACHES_SUCCESS = 'LOAD_COACHES_SUCCESS';
+export const LOAD_COACHES_PROGRESS = 'LOAD_COACHES_PROGRESS';
 
-const rooms = (state={
+const coaches = (state={
   loading: false,
   items: []
 }, action) => {
   switch (action.type) {
-    case LOAD_CLASSROOM_SUCCESS:
+    case LOAD_COACHES_SUCCESS:
       return Object.assign({}, state, {
         items: action.type
       });
-    case LOAD_CLASSROOM_PROGRESS:
+    case LOAD_COACHES_PROGRESS:
       return Object.assign({}, state, {
         loading: true
       });
@@ -19,4 +19,4 @@ const rooms = (state={
   }
 };
 
-export default rooms;
+export default coaches;

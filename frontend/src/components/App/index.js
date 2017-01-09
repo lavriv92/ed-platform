@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 import Header from '../../components/Header';
@@ -19,8 +19,14 @@ const App = ({isLoginModalOpen, dispatch, children}) => (
   </section>
 );
 
-const mapStateToProps = ({appReducers}) => {
-  let { loginModal } = appReducers;
+App.propTypes = {
+  isLoginModalOpen: PropTypes.bool.isRequired,
+  dispatch: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired
+};
+
+const mapStateToProps = ({ app }) => {
+  let { loginModal } = app;
   return {
     isLoginModalOpen: loginModal.isOpened
   };

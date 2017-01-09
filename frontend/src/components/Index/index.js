@@ -9,18 +9,20 @@ import './styles.css';
 
 class Index extends Component {
   render() {
+    let { latestCourses, popularCoaches, popularCources } = this.props;
+
     return (
       <section className="container index-page">
-        <LatestCourses />
-        <PopularCources />
-        <PopularCoaches />
+        <LatestCourses cources={latestCourses}/>
+        <PopularCources cources={popularCources}/>
+        <PopularCoaches coaches={popularCoaches}/>
       </section>
     );
   }
 }
 
-const mapStateToProps = (state) => {
-  return {};
+const mapStateToProps = ({ index }) => {
+  return index;
 };
 
 export default connect(mapStateToProps)(Index);

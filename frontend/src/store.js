@@ -1,14 +1,18 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
-import appReducers from './components/App/reducers';
-import indexReducers from './components/Index/reducers';
+import app from './components/App/reducers';
+import index from './components/Index/reducers';
+import coaches from './components/Coaches/reducers';
+import classrooms from './components/ClassRooms/reducers';
 
 let sagaMiddleware = createSagaMiddleware();
 
 let reducers = combineReducers({
-  appReducers,
-  indexReducers
+  app,
+  index,
+  coaches,
+  classrooms
 });
 
 export default createStore(
