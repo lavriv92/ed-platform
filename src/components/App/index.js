@@ -7,8 +7,6 @@ import LoginModal from '../../components/LoginModal';
 
 import { openLoginModal, closeLoginModal } from './actions';
 
-import './styles.css';
-
 const App = ({isLoginModalOpen, dispatch, children}) => (
   <section className="wrapper">
     <Header />

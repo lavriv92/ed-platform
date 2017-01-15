@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import './styles.css';
-
 const routes = [{
   name: 'Home',
   path: '/'

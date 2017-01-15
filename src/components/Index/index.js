@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 import LatestCourses from '../../components/LatestCourses';
 import PopularCources from '../../components/PopularCources';
 import PopularCoaches from '../../components/PopularCoaches';
-
-import './styles.css';
 
 class Index extends Component {
   render() {
@@ -20,6 +18,12 @@ class Index extends Component {
     );
   }
 }
+
+Index.propTypes = {
+  latestCourses: PropTypes.object.isRequired,
+  popularCources: PropTypes.object.isRequired,
+  popularCoaches: PropTypes.object.isRequired
+};
 
 const mapStateToProps = ({ index }) => {
   return index;

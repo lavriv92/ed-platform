@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Modal from 'react-modal';
 
-const LoginModal = ({isOpen, onClose}) => {
+const LoginModal = ({ isOpen, onClose }) => {
   return (
     <Modal isOpen={isOpen} contentLabel="login modal">
       <button onClick={onClose}>close</button>
