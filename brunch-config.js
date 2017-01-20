@@ -13,11 +13,12 @@ module.exports = {
   },
   plugins: {
     babel: { presets: ['es2015', 'react'] },
-    postcss: { 
-      processors: [ 
-        require('autoprefixer'),
+    postcss: {
+      processors: [
         require('precss'),
-        require('postcss-css-variables')
+        require('postcss-custom-properties'),
+        require('postcss-css-variables'),
+        require('postcss-cssnext')
       ]
     }
   },

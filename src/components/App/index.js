@@ -10,7 +10,6 @@ import { openLoginModal, closeLoginModal } from './actions';
 const App = ({isLoginModalOpen, dispatch, children}) => (
   <section className="wrapper">
     <Header />
-    <button onClick={e => dispatch(openLoginModal())}>Open modal</button>
     <main className="main-section">{children}</main>
     <Footer />
     <LoginModal isOpen={isLoginModalOpen} onClose={e => dispatch(closeLoginModal())}/>

@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 export const LOAD_LAST_COURCES_SUCCESS = 'LOAD_LAST_COURCES_SUCCESS';
 export const LOAD_LAST_COURCES_PROGRESS = 'LOAD_LAST_COURCES_PROGRESS';
 
-const lastCources = (state={
+const lastCourses = (state={
   loading: false,
   items: []
 }, action) => {
@@ -15,7 +15,7 @@ const lastCources = (state={
     case LOAD_POPULAR_COURCES_PROGRESS:
       return Object.assign({}, state, {
         loading: true
-      }); 
+      });
     default:
       return state;
   }
@@ -24,7 +24,7 @@ const lastCources = (state={
 export const LOAD_POPULAR_COURCES_SUCCESS = 'LOAD_POPULAR_COURCES_SUCCESS';
 export const LOAD_POPULAR_COURCES_PROGRESS = 'LOAD_POPULAR_COURCES_PROGRESS';
 
-const popularCources = (state={
+const popularCourses = (state={
   loading: false,
   items: []
 }, action) => {
@@ -65,6 +65,6 @@ const popularCoaches = (state={
 
 export default combineReducers({
   popularCoaches,
-  popularCources,
-  lastCources
+  popularCourses,
+  lastCourses
 });

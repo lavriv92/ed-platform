@@ -2,26 +2,26 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 import LatestCourses from '../../components/LatestCourses';
-import PopularCources from '../../components/PopularCources';
+import PopularCourses from '../../components/PopularCourses';
 import PopularCoaches from '../../components/PopularCoaches';
 
 class Index extends Component {
   render() {
-    let { latestCourses, popularCoaches, popularCources } = this.props;
+    let { lastCourses, popularCoaches, popularCourses } = this.props;
 
     return (
       <section className="container index-page">
-        <LatestCourses cources={latestCourses}/>
-        <PopularCources cources={popularCources}/>
-        <PopularCoaches coaches={popularCoaches}/>
+        <LatestCourses {...lastCourses}/>
+        <PopularCourses {...popularCourses}/>
+        <PopularCoaches {...popularCoaches}/>
       </section>
     );
   }
 }
 
 Index.propTypes = {
-  latestCourses: PropTypes.object.isRequired,
-  popularCources: PropTypes.object.isRequired,
+  lastCourses: PropTypes.object.isRequired,
+  popularCourses: PropTypes.object.isRequired,
   popularCoaches: PropTypes.object.isRequired
 };
 

@@ -1,5 +1,7 @@
+@import '../../common/theme.css';
+
 footer {
   height: 40px;
-  background: #ffbb42;
-  color: #ffffff;
+  background: var(--wet-asphalt);
+  color: var(--clouds);
 }
