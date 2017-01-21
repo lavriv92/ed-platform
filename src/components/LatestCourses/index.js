@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 
-const LatestCourses = ({ loading, items }) => {
+
+const LatestCourses = () => {
   return (
     <aside>
       <h2>Latest courses</h2>

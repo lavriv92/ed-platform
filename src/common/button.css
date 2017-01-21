@@ -1,0 +1,40 @@
+@import './theme.css';
+
+.button {
+  border: none;
+  height: 50px;
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all ease-in .5s;
+
+  &.long {
+    width: 100%;
+    padding: 0 20px;
+    font-size: 20px;
+  }
+
+  &.success {
+    background-color: var(--green-sea);
+
+    &:hover {
+      background: var(--turquoise);
+    }
+  }
+
+  &.warning {
+    background: var(--carrot);
+
+    &:hover {
+      background: var(--orange);
+    }
+  }
+
+  &.info {
+    background: var(--peter-river);
+  }
+
+  &.error {
+    background: var(--alizarin);
+  }
+}

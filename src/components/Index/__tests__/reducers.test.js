@@ -10,9 +10,9 @@ describe('<Index /> reducers: ', () => {
   });
 
   it('should return loading popular coaches state', () => {
-    let { coaches } = index({}, { 
-      type: 
+    let { coaches } = index({}, {
+      
     });
-    
+
   });
 });

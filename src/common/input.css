@@ -1,0 +1,25 @@
+@import './theme.css';
+
+input {
+  border: 2px solid var(--clouds);
+  height: 50px;
+  font-size: 1em;
+  padding: 0 20px;
+  width: 250px;
+  outline: none;
+  border-radius: 3px;
+
+  transition: all ease-in .5s;
+
+  &:fucus {
+    border: 2px solid var(--emerald);
+  }
+
+  &:invalid {
+    border: 2px solid var(--alizarin);
+  }
+
+  &:valid {
+    border: 2px solid var(--emerald);
+  }
+}

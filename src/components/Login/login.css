@@ -1,0 +1,35 @@
+@import '../../common/theme.css';
+
+.login-page {
+  display: flex;
+  justify-content: center;
+
+  .login-form {
+    padding: 60px 50px;
+    border-radius: 5px;
+    width: 250px;
+    background: var(--white);
+    margin-top: 120px;
+    margin-bottom: 200px;
+    
+    display: flex;
+    justify-content: center;
+
+    fieldset {
+      border: none;
+
+      .field {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      legend {
+        margin-bottom: 20px;
+        font-size: 22px;
+        text-align: center;
+      }
+      padding: 20px
+    }
+  }
+}

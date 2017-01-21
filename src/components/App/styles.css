@@ -4,6 +4,8 @@ html {
   font-weight: 400;
 }
 
+@import '../../common/theme.css';
+
 body {
   height: 100%;
   margin: 0;
@@ -24,6 +26,7 @@ body {
 
     .main-section {
       flex: 1 0 auto;
+      background: var(--clouds);
     }
 
     footer {
