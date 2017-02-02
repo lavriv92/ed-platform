@@ -1,0 +1,47 @@
+@import "./theme.css";
+
+.table {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: table;
+
+  &>thead {
+    &>tr th {
+      border-bottom: 1px solid var(--asbestos);
+      background: var(--silver);
+    }
+  }
+
+  &>tbody {
+    & tr {
+      border-bottom: 1px solid var(--asbestos);
+    }
+  }
+
+  &.bordered {
+    border: 1px solid var(--asbestos);
+
+    & tr {
+      border-bottom: 1px solid var(--asbestos);
+
+      & td, th {
+        text-align: center;
+      }
+
+      & td, th {
+        border-right: 1px solid var(--asbestos);
+      }
+
+      & td:last-child, th:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  &.colored {
+    & .tr .td:ntn-child(2n+1) {
+      background: var(--silver);
+    }
+  }
+}

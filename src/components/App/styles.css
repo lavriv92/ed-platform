@@ -1,10 +1,10 @@
+@import "../../common/theme.css";
+
 html {
   height: 100%;
   font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
   font-weight: 400;
 }
-
-@import '../../common/theme.css';
 
 body {
   height: 100%;

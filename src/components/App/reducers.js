@@ -7,16 +7,16 @@ const loginModal = (state={
   isOpened: false
 }, action) => {
   switch (action.type) {
-    case OPEN_LOGIN_MODAL:
-      return Object.assign({}, state, {
-        isOpened: true
-      });
-    case CLOSE_LOGIN_MODAL:
-      return Object.assign({}, state, {
-        isOpened: false
-      });
-    default:
-      return state;
+  case OPEN_LOGIN_MODAL:
+    return Object.assign({}, state, {
+      isOpened: true
+    });
+  case CLOSE_LOGIN_MODAL:
+    return Object.assign({}, state, {
+      isOpened: false
+    });
+  default:
+    return state;
   }
 };
 
@@ -27,26 +27,20 @@ const loginStatus = (state={
   isLogined: false
 }, action) => {
   switch (action.type) {
-    case LOGIN_SUCCESS:
-      return Object.assign({}, state, {
-        isLoggined: true
-      });
-    case LOGOUT_SUCCESS:
-      return Object.assign({}, state, {
-        isLoggined: false
-      });
-    default:
-      return state;
-
+  case LOGIN_SUCCESS:
+    return Object.assign({}, state, {
+      isLoggined: true
+    });
+  case LOGOUT_SUCCESS:
+    return Object.assign({}, state, {
+      isLoggined: false
+    });
+  default:
+    return state;
   }
 };
 
-const app = (state={}, action) => {
-  return state;
-};
-
 export default combineReducers({
-  app,
   loginModal,
   loginStatus
 });

@@ -1,0 +1,19 @@
+@import "./theme.css";
+
+.text {
+  &.success {
+    color: var(--green-sea);
+  }
+
+  &.warning {
+    color: var(--carrot);
+  }
+
+  &.info {
+    color: var(--peter-river);
+  }
+
+  &.error {
+    color: var(--alizarin);
+  }
+}

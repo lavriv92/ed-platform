@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import ProfileMenu from '../ProfileMenu';
 
 const routes = [{
   name: 'Home',
@@ -16,12 +17,15 @@ export default () => {
   let route;
   const routeNodes = Object.keys(routes).map(key => {
     route = routes[key];
-    return <li key={key}><Link to={route.path}>{route.name}</Link></li>
+    return <li key={key}><Link to={route.path}>{route.name}</Link></li>;
   });
 
   return (
     <nav className="nav">
-      <ul>{routeNodes}</ul>
+      <ul>
+        {routeNodes}
+        <li><ProfileMenu /></li>
+      </ul>
     </nav>
   );
 };

@@ -1,0 +1,20 @@
+@import './theme.css';
+
+.panel {
+  background: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ccc;
+
+  &.arrowed-top {
+    &::before {
+      margin: auto;
+      display: block;
+      content: '';
+      width: 15px;
+      height: 15px;
+      background: var(--white);
+      margin-top: -7.5px;
+      transform: rotate(45deg);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.guide .col {
+  background: #dddddd;
+  margin-bottom: 5px;
+  height: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.guide .buttons {
+  padding: 10px;
+}

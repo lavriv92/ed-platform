@@ -1,0 +1,22 @@
+@import "../../common/theme.css";
+
+.profile-menu {
+  & menu {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transition: opacity ease-in .5s;
+    top: 85px;
+    right: 15px;
+
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  & .profile-link {
+    color: var(--white);
+    cursor: pointer;
+  }
+}

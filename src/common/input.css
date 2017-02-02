@@ -5,18 +5,18 @@ input {
   height: 50px;
   font-size: 1em;
   padding: 0 20px;
-  width: 250px;
   outline: none;
-  border-radius: 3px;
+  border-radius: 5px;
+  box-shadow: none;
 
-  transition: all ease-in .5s;
+  transition: all ease-in .3s;
 
-  &:fucus {
+  &:focus {
     border: 2px solid var(--emerald);
-  }
 
-  &:invalid {
-    border: 2px solid var(--alizarin);
+    &:invalid {
+      border: 2px solid var(--alizarin);
+    }
   }
 
   &:valid {

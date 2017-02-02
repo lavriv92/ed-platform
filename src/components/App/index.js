@@ -5,14 +5,14 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import LoginModal from '../../components/LoginModal';
 
-import { openLoginModal, closeLoginModal } from './actions';
+import { closeLoginModal } from './actions';
 
 const App = ({isLoginModalOpen, dispatch, children}) => (
   <section className="wrapper">
     <Header />
     <main className="main-section">{children}</main>
     <Footer />
-    <LoginModal isOpen={isLoginModalOpen} onClose={e => dispatch(closeLoginModal())}/>
+    <LoginModal isOpen={isLoginModalOpen} onClose={() => dispatch(closeLoginModal())}/>
   </section>
 );
 

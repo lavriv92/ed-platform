@@ -8,8 +8,8 @@
   & .logo {
     margin: 10px;
     font-size: 1.1rem;
-    color: var(--clouds);
+    color: var(--pomegranate);
     line-height: 40px;
-    text-shadow: 0 0 0 1px #000;
+    text-shadow: 0 0 0 1px #000000;
   }
 }

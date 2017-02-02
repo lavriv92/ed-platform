@@ -1,0 +1,11 @@
+@import "./theme.css";
+
+
+a {
+  text-decoration: none;
+  color: var(--peter-river);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
