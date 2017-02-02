@@ -8,6 +8,9 @@
     transition: opacity ease-in .5s;
     top: 85px;
     right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &.visible {
       visibility: visible;

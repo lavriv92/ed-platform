@@ -19,10 +19,10 @@ class ProfileMenu extends Component {
     return (
       <div className="profile-menu">
         <span className="profile-link" onClick={this.toggleMenu}>Profile name</span>
-        <menu className={`panel arrowed-top ${visible ? 'visible' : ''}`}>
-          <li>My profile</li>
-          <li>Setting</li>
-          <li>Log out</li>
+        <menu className={`panel arrow-center-top ${visible ? 'visible' : ''}`}>
+          <div>My profile</div>
+          <div>Setting</div>
+          <div>Log out</div>
         </menu>
       </div>
     );
