@@ -9,7 +9,6 @@
     &::before {
       position: absolute;
       left: 45%;
-      z-index: 2;
       display: block;
       content: '';
       width: 15px;

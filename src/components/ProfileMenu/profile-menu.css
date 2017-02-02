@@ -11,6 +11,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0;
+    padding: 0 15px;
+
+    & .menu-item {
+      padding: 10px;
+      cursor: pointer;
+
+      &:first-child {
+        margin-top: 10px;
+      }
+
+      &:hover {
+        background: var(--silver);
+      }
+    }
 
     &.visible {
       visibility: visible;
@@ -21,5 +36,15 @@
   & .profile-link {
     color: var(--white);
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+
+    & .avatar {
+      width: 40px;
+      height: 40px;
+      margin: -8px 10px 0 0;
+      border-radius: 20px;
+      background: #ccc;
+    }
   }
 }
