@@ -1,10 +1,10 @@
 module.exports = {
   files: {
-    javascripts: { 
+    javascripts: {
       joinTo: {
         'vendor.js': /^(?!src)/,
         'app.js': /^src/
-      } 
+      }
     },
     stylesheets: { joinTo: 'app.css' }
   },
@@ -12,7 +12,9 @@ module.exports = {
     watched: [ 'src' ]
   },
   plugins: {
-    babel: { presets: ['es2015', 'react'] },
+    babel: {
+      presets: ['es2015', 'react'],
+    },
     postcss: {
       processors: [
         require('precss'),

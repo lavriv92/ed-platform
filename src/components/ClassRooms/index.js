@@ -1,12 +1,11 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react';
 
-const ClassRooms = props => (
-  <section>
-    <h2>Class rooms</h2>
-  </section>
-);
-
-const mapStateToProps = state => state;
-
-export default connect(mapStateToProps)(ClassRooms);
+export default class ClassRooms extends Component {
+  render() {
+    return (
+      <section>
+        <h2>Class rooms</h2>
+      </section>
+    );
+  }
+}
