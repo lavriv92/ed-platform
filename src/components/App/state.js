@@ -1,6 +1,5 @@
 import localStorage from '../../common/local-storage';
 
-
 class App {
   constructor() {
     this.state = {

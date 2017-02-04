@@ -1,0 +1,26 @@
+@import "../../common/theme.css";
+
+@keyframes spinner {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.spinner {
+  height: 25px;
+  width: 100px;
+  padding: 10px;
+
+  & rect {
+    fill: var(--green-sea);
+    animation: spinner 1s infinite;
+  }
+}
