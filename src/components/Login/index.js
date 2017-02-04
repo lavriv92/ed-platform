@@ -7,20 +7,30 @@ export default class Login extends Component {
   constructor() {
     super();
     this.login = this.login.bind(this);
+    this.handleEmail = this.handleEmail.bind(this);
+    this.handlePassword = this.handlePassword.bind(this);
+
     this.state = {
       username: null,
       password: null
     };
   }
 
-  handleUsername(e) {
+  handleEmail(e) {
     this.setState({
-      username: e.target.value
+      email: e.target.value
+    });
+  }
+
+  handlePassword(e) {
+    this.setState({
+      password: e.target.value
     });
   }
 
   login() {
-    app.isLogined = false;
+    let {email, password} = this.state;
+    app.login({email, password});
   }
 
   render() {
@@ -30,10 +40,10 @@ export default class Login extends Component {
           <fieldset>
             <legend>Sign in</legend>
             <div className="field">
-              <input type="email" required placeholder="Enter your Email" />
+              <input type="email" onChange={this.handleEmail} required placeholder="Enter your Email" />
             </div>
             <div className="field">
-              <input type="password" required placeholder="Enter your Password" />
+              <input type="password" onChange={this.handlePassword} required placeholder="Enter your Password" />
             </div>
             <div className="field">
               <button className="button success block" onClick={this.login}>Sign in</button>

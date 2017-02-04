@@ -9,11 +9,12 @@ class App {
     };
   }
 
-  login() {
+  login({email, password}) {
     return new Promise((resolve) => {
       let user = {
         token: 'some-edited-token',
-        email: 'test@test.com',
+        email: email,
+        password: password,
         firstName: 'Test',
         lastName: 'User'
       };

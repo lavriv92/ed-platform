@@ -4,7 +4,7 @@ class LocalStorage {
   }
 
   set(key, value) {
-    this.storage[key] = typeof value === 'string' ? JSON.stringify(value) : value;
+    this.storage[key] = typeof value !== 'string' ? JSON.stringify(value) : value;
   }
 
   get(key) {
