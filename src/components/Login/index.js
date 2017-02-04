@@ -1,7 +1,28 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
+import app from '../App/state';
+
 export default class Login extends Component {
+  constructor() {
+    super();
+    this.login = this.login.bind(this);
+    this.state = {
+      username: null,
+      password: null
+    };
+  }
+
+  handleUsername(e) {
+    this.setState({
+      username: e.target.value
+    });
+  }
+
+  login() {
+    app.isLogined = false;
+  }
+
   render() {
     return (
       <section className="login-page">
@@ -15,7 +36,7 @@ export default class Login extends Component {
               <input type="password" required placeholder="Enter your Password" />
             </div>
             <div className="field">
-              <button className="button success block">Sign in</button>
+              <button className="button success block" onClick={this.login}>Sign in</button>
             </div>
             <div className="field">
               <small>Or <Link to="/sign-up">Join to Us</Link></small>
