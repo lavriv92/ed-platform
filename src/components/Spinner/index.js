@@ -19,9 +19,9 @@ function rectSizes(count) {
   return rects;
 }
 
-const Spinner = ({count=4}) => {
-  return ( <svg className="spinner ${sizeClass}">{rectSizes(count)}</svg> );
-};
+const Spinner = ({count=4}) => (
+  <svg className="spinner ${sizeClass}">{rectSizes(count)}</svg>
+);
 
 Spinner.propTypes = {
   size: PropTypes.oneOfType(SIZES)
