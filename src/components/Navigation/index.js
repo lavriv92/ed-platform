@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 import ProfileMenu from '../ProfileMenu';
 
+import app from '../App/state';
+
 const routes = [{
   name: 'Home',
   path: '/'
@@ -20,11 +22,15 @@ export default () => {
     return <li key={key}><Link to={route.path}>{route.name}</Link></li>;
   });
 
+  let currentUser = app.currentUser();
+
+  let profileMenu = currentUser !== null ? <ProfileMenu user={currentUser} logout={app.logout}/> : null;
+
   return (
     <nav className="nav">
       <ul>
         {routeNodes}
-        <li><ProfileMenu /></li>
+        <li>{profileMenu}</li>
       </ul>
     </nav>
   );

@@ -24,6 +24,10 @@ class App {
     });
   }
 
+  logout() {
+    localStorage.remove('user');
+  }
+
   currentUser() {
     return localStorage.get('user');
   }

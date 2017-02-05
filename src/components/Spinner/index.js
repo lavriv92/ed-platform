@@ -12,7 +12,7 @@ function rectSizes(count) {
   let x = 0;
   let rects = [];
   for (let i = 0; i <= count + 2; i++) {
-    rects.push(<rect width={width} height={height} x={x}></rect>);
+    rects.push(<rect width={width} height={height} key={i} x={x}></rect>);
     x = x + width + 1;
     i++;
   }

@@ -8,7 +8,11 @@ class LocalStorage {
   }
 
   get(key) {
-    return this.storage[key] || null;
+    return JSON.parse(this.storage[key]) || null;
+  }
+
+  remove(key) {
+    delete this.storage[key];
   }
 }
 
