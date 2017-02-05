@@ -2,10 +2,7 @@ import localStorage from '../../common/local-storage';
 
 class App {
   constructor() {
-    this.state = {
-      isLogined: false,
-      user: null
-    };
+    this.user = null;
   }
 
   login({email, password}) {
@@ -26,10 +23,12 @@ class App {
 
   logout() {
     localStorage.remove('user');
+    this.user = null;
   }
 
   currentUser() {
-    return localStorage.get('user');
+    this.user = localStorage.get('user');
+    return this.user;
   }
 }
 

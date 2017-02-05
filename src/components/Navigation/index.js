@@ -17,15 +17,21 @@ const routes = [{
 
 class Navigation extends Component {
 
+  constructor() {
+    super();
+    this.state = {
+      currentUser: app.currentUser()
+    };
+  }
+
   componentWillMount() {
-    app.watch('isLogined', () => {
-      this.render();
-      console.log('login');
+    app.watch('user', (_, oldValue, currentUser) => {
+      this.setState({currentUser});
     });
   }
 
   componentWillUnmount() {
-    app.unwatch('isLogined');
+    app.unwatch('user');
   }
 
   render() {
@@ -35,15 +41,13 @@ class Navigation extends Component {
       return <li key={key}><Link to={route.path}>{route.name}</Link></li>;
     });
 
-    let currentUser = app.currentUser();
-
-    let profileMenu = currentUser !== null ? <ProfileMenu user={currentUser} logout={app.logout}/> : null;
+    let {currentUser} = this.state;
 
     return (
       <nav className="nav">
         <ul>
           {routeNodes}
-          <li>{profileMenu}</li>
+          <li>{currentUser !== null ? <ProfileMenu user={currentUser} logout={app.logout}/> : null}</li>
         </ul>
       </nav>
     );
