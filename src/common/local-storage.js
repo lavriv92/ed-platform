@@ -8,7 +8,8 @@ class LocalStorage {
   }
 
   get(key) {
-    return JSON.parse(this.storage[key]) || null;
+    let value = this.storage[key];
+    return value ? JSON.parse(this.storage[key]) : null;
   }
 
   remove(key) {

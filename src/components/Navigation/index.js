@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 import ProfileMenu from '../ProfileMenu';
 
@@ -15,23 +15,39 @@ const routes = [{
   path: '/coaches'
 }];
 
-export default () => {
-  let route;
-  const routeNodes = Object.keys(routes).map(key => {
-    route = routes[key];
-    return <li key={key}><Link to={route.path}>{route.name}</Link></li>;
-  });
+class Navigation extends Component {
 
-  let currentUser = app.currentUser();
+  componentWillMount() {
+    app.watch('isLogined', () => {
+      this.render();
+      console.log('login');
+    });
+  }
 
-  let profileMenu = currentUser !== null ? <ProfileMenu user={currentUser} logout={app.logout}/> : null;
+  componentWillUnmount() {
+    app.unwatch('isLogined');
+  }
 
-  return (
-    <nav className="nav">
-      <ul>
-        {routeNodes}
-        <li>{profileMenu}</li>
-      </ul>
-    </nav>
-  );
-};
+  render() {
+    let route;
+    const routeNodes = Object.keys(routes).map(key => {
+      route = routes[key];
+      return <li key={key}><Link to={route.path}>{route.name}</Link></li>;
+    });
+
+    let currentUser = app.currentUser();
+
+    let profileMenu = currentUser !== null ? <ProfileMenu user={currentUser} logout={app.logout}/> : null;
+
+    return (
+      <nav className="nav">
+        <ul>
+          {routeNodes}
+          <li>{profileMenu}</li>
+        </ul>
+      </nav>
+    );
+  }
+}
+
+export default Navigation;
