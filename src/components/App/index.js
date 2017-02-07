@@ -17,7 +17,6 @@ export default class App extends Component {
 
   componentWillMount() {
     app.watch('user', (_, oldValue, user) => {
-      console.log(user);
       this.setState({user});
     });
   }

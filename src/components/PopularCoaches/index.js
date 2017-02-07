@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PopularCoaches = ({ children }) => {
+const PopularCoaches = () => {
   return (
     <aside>
       <h2>Popular coaches</h2>

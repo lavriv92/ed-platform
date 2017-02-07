@@ -47,7 +47,7 @@ class Navigation extends Component {
       <nav className="nav">
         <ul>
           {routeNodes}
-          <li>{currentUser !== null ? <ProfileMenu user={currentUser} logout={e => app.logout()}/> : null}</li>
+          <li>{currentUser !== null ? <ProfileMenu user={currentUser} logout={() => app.logout()}/> : null}</li>
         </ul>
       </nav>
     );

@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha ./src/**/**/__test__/*.test.js --compilers babel-core/register",
+    "test": ".node_modules/mocha/bin/mocha ./src/**/**/__test__/*.test.js --compilers babel-core/register",
     "build": "node_modules/brunch/bin/brunch build",
-    "start": "node_modules/brunch/bin/brunch watch --server"
+    "start": "node_modules/brunch/bin/brunch watch --server",
+    "lint": "node_modules/eslint/bin/eslint.js ./src/**/**/*.js"
   },
   "devDependencies": {
     "auto-reload-brunch": "^2.7.1",

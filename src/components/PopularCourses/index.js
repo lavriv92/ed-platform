@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PopularCources = ({cources}) => {
+const PopularCources = () => {
   return (
     <aside>
       <h2>Popular cources</h2>
