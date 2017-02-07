@@ -6,19 +6,15 @@ class App {
   }
 
   login({email, password}) {
-    return new Promise((resolve) => {
-      let user = {
-        token: 'some-edited-token',
-        email: email,
-        password: password,
-        firstName: 'Test',
-        lastName: 'User'
-      };
-      localStorage.set('user', user);
-      setTimeout(() => {
-        resolve(user);
-      }, 1000);
-    });
+    let user = {
+      token: 'some-edited-token',
+      email: email,
+      password: password,
+      firstName: 'Test',
+      lastName: 'User'
+    };
+    localStorage.set('user', user);
+    this.user = localStorage.get('user');
   }
 
   logout() {
