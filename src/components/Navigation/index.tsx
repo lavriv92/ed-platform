@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import { Link } from 'react-router';
 import ProfileMenu from '../ProfileMenu';
 
@@ -15,7 +15,7 @@ const routes = [{
   path: '/coaches'
 }];
 
-class Navigation extends Component {
+class Navigation extends React.Component<any, undefined> {
 
   constructor() {
     super();

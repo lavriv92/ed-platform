@@ -9,12 +9,9 @@ module.exports = {
     stylesheets: { joinTo: 'app.css' }
   },
   paths: {
-    watched: [ 'src' ]
+    watched: [ 'src', 'assets' ]
   },
   plugins: {
-    babel: {
-      presets: ['es2015', 'react'],
-    },
     postcss: {
       processors: [
         require('precss'),
@@ -32,5 +29,6 @@ module.exports = {
   server: {
     port: 8080,
     stripSlashes: true,
-  }
+  },
+	npm: {enabled: true}
 };

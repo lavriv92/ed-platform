@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -6,7 +6,9 @@ import Login from '../../components/Login';
 
 import app from './state';
 
-export default class App extends Component {
+interface AppProps  {}
+
+export default class App extends React.Component<AppPropTypes, undefined> {
 
   constructor() {
     super();

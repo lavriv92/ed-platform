@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import { Link } from 'react-router';
 
 import app from '../App/state';
 
-export default class Login extends Component {
+
+export default class Login extends React.Component<any, undefined> {
   constructor() {
     super();
     this.login = this.login.bind(this);

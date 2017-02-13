@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 
-class ProfileMenu extends Component {
+class ProfileMenu extends React.Component<any, undefined> {
   constructor() {
     super();
     this.state = {
