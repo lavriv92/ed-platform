@@ -1,15 +1,18 @@
 import * as React from 'react';
 
-class ProfileMenu extends React.Component<any, undefined> {
+interface ProfileMenuState {
+  visible: boolean
+}
+
+class ProfileMenu extends React.Component<any, ProfileMenuState> {
   constructor() {
     super();
     this.state = {
       visible: false
     };
-    this.toggleMenu = this._toggleMenu.bind(this);
   }
 
-  _toggleMenu() {
+  toggleMenu() {
     this.setState({visible: !this.state.visible});
   }
 
@@ -19,7 +22,7 @@ class ProfileMenu extends React.Component<any, undefined> {
 
     return (
       <div className="profile-menu">
-        <div className="profile-link" onClick={this.toggleMenu}>
+        <div className="profile-link" onClick={this.toggleMenu.bind(this)}>
           <img src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/15032174_1260630360666891_8456893431431950772_n.jpg?oh=ca76772d53f7edb1eb087d0ddef96755&oe=59442597" alt="#" className="avatar" />
           <small>{user && user.firstName} {user && user.lastName}</small>
         </div>

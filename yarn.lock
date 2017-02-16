@@ -2322,6 +2322,34 @@ mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
   dependencies:
     minimist "0.0.8"
 
+mobx-connect@^0.3.9:
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/mobx-connect/-/mobx-connect-0.3.9.tgz#cc0be1fbd651c065b467c8ff08231bb0fd783286"
+  dependencies:
+    mobx "2.x"
+    mobx-inferno "^0.1.x"
+    mobx-react "^3.5.x"
+
+mobx-inferno@^0.1.x:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/mobx-inferno/-/mobx-inferno-0.1.3.tgz#be46a9165ab8e7b7450b1a88358fdca8e77c2791"
+  dependencies:
+    mobx "2.x"
+
+mobx-react@^3.5.x:
+  version "3.5.9"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-3.5.9.tgz#b710299539d58d7af1189b5e86bc0be4198a43c1"
+  dependencies:
+    hoist-non-react-statics "^1.2.0"
+
+mobx@2.x:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-2.7.0.tgz#cf3d82d18c0ca7f458d8f2a240817b3dc7e54a01"
+
+mobx@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-3.1.0.tgz#e5f15b475efdd1eea1f5c43a0afccde6e6f322ee"
+
 mocha@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/mocha/-/mocha-3.2.0.tgz#7dc4f45e5088075171a68896814e6ae9eb7a85e3"

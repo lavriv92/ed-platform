@@ -4,7 +4,13 @@ import { Link } from 'react-router';
 import app from '../App/state';
 
 
-export default class Login extends React.Component<any, undefined> {
+interface LoginState {
+  email: string,
+  password: string
+}
+
+
+export default class Login extends React.Component<any, LoginState> {
   constructor() {
     super();
     this.login = this.login.bind(this);
@@ -12,7 +18,7 @@ export default class Login extends React.Component<any, undefined> {
     this.handlePassword = this.handlePassword.bind(this);
 
     this.state = {
-      username: null,
+      email: null,
       password: null
     };
   }

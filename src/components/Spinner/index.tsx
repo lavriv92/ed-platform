@@ -10,7 +10,7 @@ function rectSizes(count: number) {
   let width : number = 15;
   let height : number = 15;
   let x = 0;
-  let rects : Array<React.Component<React.SVGProps, undefined>> = [];
+  let rects : Array<any> = [];
   for (let i = 0; i <= count + 2; i++) {
     rects.push(<rect width={width} height={height} key={i} x={x}></rect>);
     x = x + width + 1;

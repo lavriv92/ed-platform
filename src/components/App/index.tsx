@@ -1,40 +1,45 @@
 import * as React from 'react';
+import {observer, inject} from 'mobx-react';
+import {hashHistory} from 'react-router';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-
 import Login from '../../components/Login';
+import state from "./state";
 
-import app from './state';
+interface AppProps  {
+  children: React.Component<any, any>,
+  state: any,
+  location: any
+}
 
-interface AppProps  {}
+interface AppState {
+  user: any
+}
 
-export default class App extends React.Component<AppPropTypes, undefined> {
+@inject(() => ({state}))
+@observer
+export default class App extends React.Component<AppProps, AppState> {
 
   constructor() {
     super();
     this.state = {
-      user: app.currentUser()
+      user: null
     };
   }
 
-  componentWillMount() {
-    app.watch('user', (_, oldValue, user) => {
-      this.setState({user});
-    });
-  }
-
-  componentWillUnmount() {
-    app.unwatch('user');
-  }
-
   render() {
-    let {children} = this.props;
-    let {user} = this.state;
+    let {children, state} = this.props;
+
+    console.log(this.props.location.path)
+
+    if (!state.isLogined && this.props.location.pathname !== '/signin')  {
+      hashHistory.push('signin')
+    }
 
     return (
       <section className="wrapper">
         <Header />
-        <main className="main-section">{user ? children : <Login />}</main>
+        <main className="main-section">{children}</main>
         <Footer />
       </section>
     );
