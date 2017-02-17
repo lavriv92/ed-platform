@@ -3,10 +3,12 @@
 .profile-menu {
   & menu {
     visibility: hidden;
+    display: none;
     position: absolute;
     opacity: 0;
     transition: opacity ease-in .5s;
-    top: 85px;
+    top: 65px;
+    box-shadow: 0 0 5px #ccc;
     right: 15px;
     display: flex;
     flex-direction: column;
@@ -16,6 +18,7 @@
 
     & .menu-item {
       padding: 10px;
+      font-size: 16px;
       cursor: pointer;
 
       &:first-child {
@@ -28,21 +31,29 @@
     }
 
     &.visible {
+      display: block;
       visibility: visible;
       opacity: 1;
     }
   }
 
   & .profile-link {
-    color: var(--white);
+    color: var(--asbestos);
+    margin-bottom: -40px;
     cursor: pointer;
     display: flex;
+    font-size: 16px;
     justify-content: space-between;
+
+    & .profile-name {
+      display: inline-block;
+      margin: 8px 10px 0 0;
+    }
 
     & .avatar {
       width: 40px;
       height: 40px;
-      margin: -8px 10px 0 0;
+      margin: 0 10px 8px 0;
       border-radius: 20px;
       background: #ccc;
     }

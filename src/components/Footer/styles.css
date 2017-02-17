@@ -2,6 +2,7 @@
 
 footer {
   height: 40px;
-  background: var(--wet-asphalt);
+  background: var(--white);
   color: var(--clouds);
+  font-size: 16px;
 }

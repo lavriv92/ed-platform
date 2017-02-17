@@ -29,7 +29,6 @@
     "typescript-brunch": "^2.2.0"
   },
   "dependencies": {
-    "isomorphic-fetch": "^2.2.1",
     "mobx": "^3.1.0",
     "mobx-connect": "^0.3.9",
     "postcss": "^5.2.6",
@@ -39,6 +38,7 @@
     "react-dom": "^15.3.2",
     "react-modal": "^1.6.4",
     "react-router": "^2.8.1",
-    "react-router-dom": "next"
+    "react-router-dom": "next",
+    "superagent": "^3.4.4"
   }
 }

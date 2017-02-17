@@ -3,16 +3,16 @@ class LocalStorage {
     this.storage = window.localStorage;
   }
 
-  set(key, value) {
+  set(key : string, value) {
     this.storage[key] = typeof value !== 'string' ? JSON.stringify(value) : value;
   }
 
-  get(key) {
+  get(key : string) {
     let value = this.storage[key];
     return value ? JSON.parse(this.storage[key]) : null;
   }
 
-  remove(key) {
+  remove(key : string) {
     delete this.storage[key];
   }
 }

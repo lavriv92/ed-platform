@@ -1,0 +1,26 @@
+@import '../../common/theme.css';
+
+.notification {
+  color: var(--white);
+  height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+
+  &.success {
+    background-color: var(--green-sea);
+  }
+
+  &.danger {
+    background: var(--alizarin);
+  }
+
+  &.info {
+    background: var(--peter-river);
+  }
+
+  &.warning {
+    background: var(--carrot);
+  }
+}
