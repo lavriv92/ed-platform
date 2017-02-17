@@ -15,6 +15,7 @@
 }
 
 .nav li a {
-  color: var(--clouds);
+  font-size: 16px;
+  color: var(--alizarin);
   text-decoration: none;
 }

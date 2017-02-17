@@ -30,12 +30,6 @@ export default class App extends React.Component<AppProps, AppState> {
   render() {
     let {children, state} = this.props;
 
-    console.log(this.props.location.path)
-
-    if (!state.isLogined && this.props.location.pathname !== '/signin')  {
-      hashHistory.push('signin')
-    }
-
     return (
       <section className="wrapper">
         <Header />
