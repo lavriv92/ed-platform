@@ -1,15 +1,16 @@
 import * as React from 'react';
 import {observer, inject} from 'mobx-react';
 import {hashHistory} from 'react-router';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import Login from '../../components/Login';
-import Notification from '../../components/Notification';
-import state from "./state";
+import {injectState} from '../../common/connect';
+import Header from '../Header';
+import Footer from '../Footer';
+import Login from '../Login';
+import Notification from '../Notification';
+import AppStore from "./state";
 
 interface AppProps  {
   children: React.Component<any, any>,
-  state: any,
+  store: any,
   location: any
 }
 
@@ -17,14 +18,17 @@ interface AppState {
   user: any
 }
 
-@inject(() => ({state}))
+@injectState(
+  new AppStore
+)
 @observer
 export default class App extends React.Component<AppProps, AppState> {
   render() {
-    let {children} = this.props;
+    let { children, store: { user } } = this.props;
 
     return (
       <section className="wrapper">
+        <h2>User: {user}</h2>
         <Notification message="Hello message notification message"/>
         <Header />
         <main className="main-section">{children}</main>
